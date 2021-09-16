@@ -22,30 +22,126 @@
       </header>
       <main>
         <section id="section-1">
-          <img src="https://images.unsplash.com/photo-1571268493589-ec822cf5206c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt=''>
-          <div id="book-place">
-            <p><b>Start Booking a Places</b></p>
-           <p>Find place that suits for your need, it's easy</p>
 
-           
-          <form>
-            <label for="place">Places</label>
-            <input name="place" type="text" placeholder="Enter place name or city ">
+          <div id="book-place">
+            <p><b>Registro de Ingreso</b></p>
+            <br><br>
             <div>
-              <label for="date-in">Check in</label>
-              <input name="date-in"type="date">
-              <label for="date-out">Check Out</label>
-              <input name="date-out" type="date">
+              <p>Estimado Cliente:
+  
+                Contamos con habitaciones triples, matrimoniales, dobles y simples. Todas  cuentan con tv con cable, wifi y baño privado. La limpieza y desinfección es diaria.
+                
+                Para reservar una habitación deberá llenar el siguiente formulario
+
+              </p>
+              <br>
+              <p>
+                
+                Recordar:
+              
+              </p>
+              <br><br>
+              <li>
+                1. Ingreso solo con DNI (mayores de 18 años) u otro documento de identidad.
+              </li>
+              <li>
+                2. Usar tapaboca al entrar y salir del edificio
+              </li>
+              <li>
+                3. Si presenta temperatura es más alta al establecido por el gobierno no podrá entrar al recinto.
+              </li>
+              <li>
+                4. La confirmación de la reserva solo estará garantizada con el pago de la misma.
+              </li>
+              <li>
+                5. Si desea estacionamiento deberá consultar su disponibilidad.
+              </li>
             </div>
-            <label for="people">Guest</label>
-            <input name="people" type="text" placeholder="How many guest ?">
-            <input id="submit" type="submit" value="Search Places">
-          </form>
+            
+            <form action="/reservar" method="post" role="form">
+              <label for="email">Correo electrónico</label>
+              <input name="email" type="email" placeholder=" Ingresa tu correo electrónico">
+              <div>
+                <label for="date-in">Entrada</label>
+                <input name="date-in"type="date">
+                <label for="date-out">Salida</label>
+                <input name="date-out" type="date">
+              </div>
+
+              <label for="nombre">Nombres</label>
+              <input name="nombre" type="text" placeholder=" Nombres">
+
+              <label for="apellido">Apellidos</label>
+              <input name="apellido" type="text" placeholder=" Apellidos">
+
+              <label for="dni">DNI</label>
+              <input name="dni" type="text" placeholder=" DNI">
+
+              <label for="telefono">Teléfono</label>
+              <input name="telefono" type="text" placeholder=" Teléfono">
+
+              <label for="ciudad">Ciudad</label>
+              <input name="ciudad" type="text" placeholder=" Ciudad">
+
+              <label for="habitacion">Tipo de Habitación</label>
+              <select name="habitaciones" >
+                <option value="simple-express">SIMPLE EXPRESS</option>
+                <option value="matrimonial">MATRIMONIAL</option>
+                <option value="doble">DOBLE</option>
+                <option value="triple">TRIPLE</option>
+                <option value="cuádruple">CUÁDRUPLE</option>
+              </select>
+              <br>
+              <br>
+              <label for="start">Fecha de ingreso</label>
+              <input type="date" id="start" name="trip-start"
+                     value="2018-07-22"
+                     min="2018-01-01" max="2018-12-31">
+              
+              <label for="start">Hora de Ingreso</label>
+              <input type="time">
+
+              <label for="start">Hora de Salida</label>
+              <input type="time">
+
+              <label for="forma-pago">Forma de Pago</label>
+              <select name="habitaciones" >
+                <option value="simple-express">BCP</option>
+                <option value="matrimonial">InterBank</option>
+                <option value="doble">Yape</option>
+                <option value="triple">Efectivo</option>
+                <option value="cuádruple">Tárjeta</option>
+              </select>
+              <br>
+              <br>
+              <p>TENER EN CUENTA
+              </p>              <br>
+              <p>
+                Recordar:
+              </p>              <br>
+              <li>
+                1. Ingreso solo con DNI. ( Mayores de 18 años)
+              </li>
+              <li>
+                2. Usar tapaboca al entrar y salir del Edificio
+              </li>
+              <li>
+                3. Si presenta fiebre no podrá entrar al recinto.
+              </li>
+              <li>
+                4. Enviar voucher de pago al 941590216
+              </li>
+              <li>
+                5. Llamar 10 minutos antes de llegar
+              </li>
+              <br><br>
+              <input id="submit" type="submit" value="Reservar">
+            </form>
 
 
           </div>
         </section>
-        <div class="companys"></div>
+
       </main>
       <footer>
         <div class="main-footer">
@@ -55,22 +151,22 @@
           </div>
           <div>
             <nav>
-              <p><b>Navigation</b></p>
+              <p><b>Navegación</b></p>
               <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Facilities</a></li>
-                <li><a href="">Help</a></li>
-                <li><a href="">About Us</a></li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Facilidades</a></li>
+                <li><a href="">Ayuda</a></li>
+                <li><a href="">Nosotros</a></li>
               </ul>
             </nav>
           </div>
           <div class="footer-email">
-            <p><b>Contect Us</b></p>
+            <p><b>Contáctanos</b></p>
             <p>Write to us: email@host.com</p>
             <p>Call to us: +98 765 234 456</p>
           </div>
           <div class="footer-address">
-            <p><b>Our Office</b></p>
+            <p><b>Nuestra Oficina</b></p>
             <p>
               <span>Indonesia JI.</span> 
               Griya permata hijau no D1 Purwomartani, Kalasan 55571
@@ -80,10 +176,10 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>2020 &copy; Nature Valley. All rights reserved.</p>
+          <p>2021 &copy; Residencial San Gabriel. All rights reserved.</p>
           <div id="other-footer">
-            <p><a href="">Terms and Conditions</a></p>
-            <p><a href="">Privacy Policy</a></p>
+            <p><a href="">Terminos y Condiciones</a></p>
+            <p><a href="">Política de Privacidad</a></p>
           </div>
         </div>
       </footer>

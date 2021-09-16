@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.sendFile('./public/index.html', { root:__dirname })
 })
 
+app.post('/reservar', (req, res) => {
+  
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
