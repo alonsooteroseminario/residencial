@@ -5,12 +5,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 
-app.get('/', (req, res) => {
+app.get('/reservar', (req, res) => {
   res.sendFile('./public/index.html', { root:__dirname })
 })
 
-app.post('/reservar', (req, res) => {
-  
+app.post('/reservar/enviar', (req, res) => {
+  const data = req.body;
+  console.log(data)
+  res.status(200).json(data);
 })
 
 app.listen(port, () => {

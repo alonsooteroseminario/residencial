@@ -58,15 +58,9 @@
               </li>
             </div>
             
-            <form action="/reservar" method="post" role="form">
+            <form action="/reservar/enviar" method="post" role="form">
               <label for="email">Correo electrónico</label>
               <input name="email" type="email" placeholder=" Ingresa tu correo electrónico">
-              <div>
-                <label for="date-in">Entrada</label>
-                <input name="date-in"type="date">
-                <label for="date-out">Salida</label>
-                <input name="date-out" type="date">
-              </div>
 
               <label for="nombre">Nombres</label>
               <input name="nombre" type="text" placeholder=" Nombres">
@@ -74,8 +68,8 @@
               <label for="apellido">Apellidos</label>
               <input name="apellido" type="text" placeholder=" Apellidos">
 
-              <label for="dni">DNI</label>
-              <input name="dni" type="text" placeholder=" DNI">
+              <label for="dni">DNI u Pasaporte</label>
+              <input name="dni" type="text" placeholder=" DNI u Pasaporte">
 
               <label for="telefono">Teléfono</label>
               <input name="telefono" type="text" placeholder=" Teléfono">
@@ -94,18 +88,16 @@
               <br>
               <br>
               <label for="start">Fecha de ingreso</label>
-              <input type="date" id="start" name="trip-start"
-                     value="2018-07-22"
-                     min="2018-01-01" max="2018-12-31">
+              <input name="fecha-ingreso" type="date" id="start">
               
               <label for="start">Hora de Ingreso</label>
-              <input type="time">
+              <input name="hora-ingreso" type="time">
 
               <label for="start">Hora de Salida</label>
-              <input type="time">
+              <input name="hora-salida" type="time">
 
               <label for="forma-pago">Forma de Pago</label>
-              <select name="habitaciones" >
+              <select name="forma-pago" >
                 <option value="simple-express">BCP</option>
                 <option value="matrimonial">InterBank</option>
                 <option value="doble">Yape</option>
@@ -178,7 +170,7 @@
         <div class="footer-bottom">
           <p>2021 &copy; Residencial San Gabriel. All rights reserved.</p>
           <div id="other-footer">
-            <p><a href="">Terminos y Condiciones</a></p>
+            <p><a href="">Términos y Condiciones</a></p>
             <p><a href="">Política de Privacidad</a></p>
           </div>
         </div>
