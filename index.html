@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Residencial San Gabriel</title>
+</head>
+<body>
+      <header>
+        <h1 class="logo">Residencial San Gabriel</h1>
+        <nav>
+          <ul class="main-menu">
+            <li>Inicio</li>
+            <li>Facilidades</li>
+            <li>Contecta</li>
+            <li>Nosotros</li>
+          </ul>
+        </nav>
+        <a id="main-btn">Registrarse</a>
+      </header>
+      <main>
+        <section id="section-1">
+
+          <div id="book-place">
+            <p><b>Registro de Ingreso</b></p>
+            <br><br>
+            <div>
+              <p>Estimado Cliente:
+  
+                Contamos con habitaciones triples, matrimoniales, dobles y simples. Todas  cuentan con tv con cable, wifi y baño privado. La limpieza y desinfección es diaria.
+                
+                Para reservar una habitación deberá llenar el siguiente formulario
+
+              </p>
+              <br>
+              <p>
+                
+                Recordar:
+              
+              </p>
+              <br><br>
+              <li>
+                1. Ingreso solo con DNI (mayores de 18 años) u otro documento de identidad.
+              </li>
+              <li>
+                2. Usar tapaboca al entrar y salir del edificio
+              </li>
+              <li>
+                3. Si presenta temperatura es más alta al establecido por el gobierno no podrá entrar al recinto.
+              </li>
+              <li>
+                4. La confirmación de la reserva solo estará garantizada con el pago de la misma.
+              </li>
+              <li>
+                5. Si desea estacionamiento deberá consultar su disponibilidad.
+              </li>
+            </div>
+            
+            <form action="/reservar/enviar" method="post" role="form">
+              <label for="email">Correo electrónico</label>
+              <input name="email" type="email" placeholder=" Ingresa tu correo electrónico">
+
+              <label for="nombre">Nombres</label>
+              <input name="nombre" type="text" placeholder=" Nombres">
+
+              <label for="apellido">Apellidos</label>
+              <input name="apellido" type="text" placeholder=" Apellidos">
+
+              <label for="dni">DNI u Pasaporte</label>
+              <input name="dni" type="text" placeholder=" DNI u Pasaporte">
+
+              <label for="telefono">Teléfono</label>
+              <input name="telefono" type="text" placeholder=" Teléfono">
+
+              <label for="ciudad">Ciudad</label>
+              <input name="ciudad" type="text" placeholder=" Ciudad">
+
+              <label for="habitacion">Tipo de Habitación</label>
+              <select name="habitaciones" >
+                <option value="simple-express">SIMPLE EXPRESS</option>
+                <option value="matrimonial">MATRIMONIAL</option>
+                <option value="doble">DOBLE</option>
+                <option value="triple">TRIPLE</option>
+                <option value="cuádruple">CUÁDRUPLE</option>
+              </select>
+              <br>
+              <br>
+              <label for="start">Fecha de ingreso</label>
+              <input name="fechaIngreso" type="date" id="start">
+              
+              <label for="start">Hora de Ingreso</label>
+              <input name="horaIngreso" type="time">
+
+              <label for="start">Hora de Salida</label>
+              <input name="horaSalida" type="time">
+
+              <label for="forma-pago">Forma de Pago</label>
+              <select name="formaPago" >
+                <option value="bcp">BCP</option>
+                <option value="interbank">InterBank</option>
+                <option value="yape">Yape</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tárjeta</option>
+              </select>
+              <br>
+              <br>
+              <p>TENER EN CUENTA
+              </p>              <br>
+              <p>
+                Recordar:
+              </p>              <br>
+              <li>
+                1. Ingreso solo con DNI. ( Mayores de 18 años)
+              </li>
+              <li>
+                2. Usar tapaboca al entrar y salir del Edificio
+              </li>
+              <li>
+                3. Si presenta fiebre no podrá entrar al recinto.
+              </li>
+              <li>
+                4. Enviar voucher de pago al 941590216
+              </li>
+              <li>
+                5. Llamar 10 minutos antes de llegar
+              </li>
+              <br><br>
+              <input id="submit" type="submit" value="Reservar">
+            </form>
+
+
+          </div>
+        </section>
+
+      </main>
+      <footer>
+        <div class="main-footer">
+          <div class="footer-logo">
+            <h1>Residencial San Gabriel</h1>
+            <h3>We are here to help you find place for your needs like work, vacation or do some events</h3>
+          </div>
+          <div>
+            <nav>
+              <p><b>Navegación</b></p>
+              <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Facilidades</a></li>
+                <li><a href="">Ayuda</a></li>
+                <li><a href="">Nosotros</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-email">
+            <p><b>Contáctanos</b></p>
+            <p>Write to us: email@host.com</p>
+            <p>Call to us: +98 765 234 456</p>
+          </div>
+          <div class="footer-address">
+            <p><b>Nuestra Oficina</b></p>
+            <p>
+              <span>Indonesia JI.</span> 
+              Griya permata hijau no D1 Purwomartani, Kalasan 55571
+            </p>
+            <p><span>Singapore Gg.</span> 
+              Musi, Jetis, Wedomartani, Kec. Ngemplak</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2021 &copy; Residencial San Gabriel. All rights reserved.</p>
+          <div id="other-footer">
+            <p><a href="">Términos y Condiciones</a></p>
+            <p><a href="">Política de Privacidad</a></p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

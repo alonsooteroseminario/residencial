@@ -2,13 +2,13 @@ const express = require('express')
 const { transporterGmail } = require('./controllers/email');
 
 const app = express()
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 
 app.get('/reservar', (req, res) => {
-  res.sendFile('./public/index.html', { root:__dirname })
+  res.sendFile('./index.html', { root:__dirname })
 })
 
 app.get('/reservar/confirmacion', (req, res) => {
@@ -48,6 +48,6 @@ app.post('/reservar/enviar', (req, res) => {
   res.redirect('/reservar/confirmacion')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })
