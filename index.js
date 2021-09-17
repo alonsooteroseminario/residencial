@@ -1,5 +1,5 @@
 const express = require('express')
-const { transporterGmail } = require('./controllers/email');
+const { client } = require('./controllers/msg');
 
 const app = express()
 const PORT = process.env.PORT || 3000;
@@ -19,31 +19,27 @@ app.get('/reservar/confirmacion', (req, res) => {
 app.post('/reservar/enviar', (req, res) => {
   const data = req.body;
   console.log(data)
-  const mailOptionsLogin = {
-    from: 'Servidor Login',
-    // to: 'kadin.bernier77@ethereal.email',
-    to: process.env.EMAIL_RECEPTOR.toString(),
-    subject: `Reserva de ${data.nombre} ${data.apellido} a las ${new Date().toLocaleString()}`,
-    html: `<h1 style="color: blue;">El usuario ${data.nombre} ${data.apellido} se hecho una reserva a las ${new Date().toLocaleString()} </h1>
-                                              <br><br>
-                                                 <li> Email: ${data.email} </li>
-                                                 <li> DNI:  ${data.dni} </li>
-                                                 <li> Telefono:  ${data.telefono} </li>
-                                                 <li> Ciudad:  ${data.ciudad} </li>
-                                                 <li> Habitaciones:  ${data.habitaciones} </li>
-                                                 <li> Fecha Ingreso: ${data.fechaIngreso} </li>
-                                                 <li> Hora Ingreso: ${data.horaIngreso} </li>
-                                                 <li> Hora Salida: ${data.horaSalida} </li>
-                                                 <li> Forma de Pago: ${data.formaPago} </li>`
-  };
 
-  transporterGmail.sendMail(mailOptionsLogin, (err, info) => {
-    if(err) {
-        console.log(err)
-        return err
-    }
-    
-  })
+  client.messages.create({
+    body: `Reserva de ${data.nombre} ${data.apellido} a las ${new Date().toLocaleString()} \n\n
+    Mensaje completo: \n\n
+    El usuario ${data.nombre} ${data.apellido} hizo una reserva a las ${new Date().toLocaleString()}
+                                        
+            Email: ${data.email} 
+            DNI:  ${data.dni} 
+            Teléfono:  ${data.telefono} 
+            Ciudad:  ${data.ciudad} 
+            Habitaciones:  ${data.habitaciones} 
+            Fecha Ingreso: ${data.fechaIngreso} 
+            Hora Ingreso: ${data.horaIngreso} 
+            Hora Salida: ${data.horaSalida} 
+            Forma de Pago: ${data.formaPago} `,
+    // mediaUrl: ['https://www.investingmoney.biz/public/img/art/xl/18012019161021Twilio-IoT.jpg'],
+    from: 'whatsapp:+14155238886',
+    to: 'whatsapp:+51947308823'
+    })
+  .then(message => console.log(message.sid))
+  .catch(console.log)  
 
   res.redirect('/reservar/confirmacion')
 })
